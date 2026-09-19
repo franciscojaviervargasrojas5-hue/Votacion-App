@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Votación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Vota por tu opción favorita</h1>
+        
+        <!-- Input para identificar al votante -->
+        <div class="user-box">
+            <label for="nombreUsuario">Tu Nombre o Apellido:</label>
+            <input type="text" id="nombreUsuario" placeholder="Ej. Juan Pérez" required>
+        </div>
+
+        <div class="options-grid">
+            <!-- Opción 1 -->
+            <div class="card">
+                <img src="ploma1.jpeg" alt="Opción 1">
+                <h3>Opción 1</h3>
+                <button onclick="votar(1, 'Opción 1')">Votar</button>
+            </div>
+            <!-- Opción 2 -->
+            <div class="card">
+                <img src="azul2.jpeg" alt="Opción 2">
+                <h3>Opción 2</h3>
+                <button onclick="votar(2, 'Opción 2')">Votar</button>
+            </div>
+            <!-- Opción 3 -->
+            <div class="card">
+                <img src="blanca3.jpeg" alt="Opción 3">
+                <h3>Opción 3</h3>
+                <button onclick="votar(3, 'Opción 3')">Votar</button>
+            </div>
+        </div>
+
+        <div class="results">
+            <h2>Resultados en vivo</h2>
+            <p>Opción 1: <span id="votos-1">0</span> votos</p>
+            <p>Opción 2: <span id="votos-2">0</span> votos</p>
+            <p>Opción 3: <span id="votos-3">0</span> votos</p>
+        </div>
+
+        <!-- Sección para que tú (o cualquiera) vea quién votó -->
+        <div class="voters-list">
+            <h2>¿Quiénes han votado?</h2>
+            <ul id="lista-votantes">
+                <!-- Se llenará automáticamente -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Scripts de Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
