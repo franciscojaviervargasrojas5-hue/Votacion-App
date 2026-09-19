@@ -1,12 +1,13 @@
-// --- CONFIGURA ESTO CON TUS DATOS DE FIREBASE ---
+// --- CONFIGURACIÓN DE FIREBASE CORREGIDA ---
 const firebaseConfig = {
-    apiKey: "TU_API_KEY",
-    authDomain: "tu-proyecto.firebaseapp.com",
-    databaseURL: "https://tu-proyecto-default-rtdb.firebaseio.com",
-    projectId: "tu-proyecto",
-    storageBucket: "tu-proyecto.appspot.com",
-    messagingSenderId: "tu_sender_id",
-    appId: "tu_app_id"
+    apiKey: "AIzaSyAPZ8vqBxaMxkT6W3mubfHG65fm7imEAWM",
+    authDomain: "votacionapp-7f777.firebaseapp.com",
+    databaseURL: "https://votacionapp-7f777-default-rtdb.firebaseio.com", // <-- ¡Esta línea faltaba y es obligatoria!
+    projectId: "votacionapp-7f777",
+    storageBucket: "votacionapp-7f777.firebasestorage.app",
+    messagingSenderId: "739814735072",
+    appId: "1:739814735072:web:44b8044d4553401ac02485",
+    measurementId: "G-FLTD6KF239"
 };
 
 // Inicializar Firebase
@@ -64,5 +65,5 @@ db.ref("votosRegistrados").on("value", (snapshot) => {
         const li = document.createElement("li");
         li.innerText = `${nombreVotante} votó por: ${infoVoto.opcion}`;
         lista.appendChild(li);
-    });
+    });    
 });
