@@ -2,7 +2,7 @@
 const firebaseConfig = {
     apiKey: "AIzaSyAPZ8vqBxaMxkT6W3mubfHG65fm7imEAWM",
     authDomain: "votacionapp-7f777.firebaseapp.com",
-    databaseURL: "https://votacionapp-7f777-default-rtdb.firebaseio.com", // <-- ¡Esta línea faltaba y es obligatoria!
+    databaseURL: "https://votacionapp-7f777-default-rtdb.firebaseio.com/", // <-- ¡Esta línea faltaba y es obligatoria!
     projectId: "votacionapp-7f777",
     storageBucket: "votacionapp-7f777.firebasestorage.app",
     messagingSenderId: "739814735072",
